@@ -19,11 +19,15 @@ class DataIngestion:
             raise PhisingException(e,sys)
 
 
+    
+
+
     def initiate_data_ingestion(self):
         try:
             df=utils.get_collection_as_dataframe(data_base_name=self.data_ingestion_config.data_base_name,collection_name=self.data_ingestion_config.collection_name)
-
+            df.drop(['_id'],axis=1,inplace=True)
             df.replace(to_replace='na',value=np.NAN,inplace=True)
+           
             df.drop_duplicates()
 
 

@@ -1,0 +1,674 @@
+data_drift_with_in_test:
+  asn_ip:
+    pvalues: 0.4532012290910321
+    same_distribution: true
+  directory_length:
+    pvalues: 0.9999924925525719
+    same_distribution: true
+  domain_google_index:
+    pvalues: 1.0
+    same_distribution: true
+  domain_in_ip:
+    pvalues: 1.0
+    same_distribution: true
+  domain_length:
+    pvalues: 0.9775370762109203
+    same_distribution: true
+  domain_spf:
+    pvalues: 0.9999997670447459
+    same_distribution: true
+  email_in_url:
+    pvalues: 1.0
+    same_distribution: true
+  file_length:
+    pvalues: 0.9999999999992628
+    same_distribution: true
+  length_url:
+    pvalues: 0.7860723482638301
+    same_distribution: true
+  params_length:
+    pvalues: 0.9426700314048695
+    same_distribution: true
+  phishing:
+    pvalues: 1.0
+    same_distribution: true
+  qty_and_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_and_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_and_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_and_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_and_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_asterisk_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_asterisk_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_asterisk_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_asterisk_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_asterisk_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_at_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_at_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_at_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_at_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_at_url:
+    pvalues: 0.9999999999999976
+    same_distribution: true
+  qty_comma_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_comma_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_comma_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_comma_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_comma_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dollar_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dollar_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dollar_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dollar_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_dollar_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dot_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dot_domain:
+    pvalues: 0.9011983484464232
+    same_distribution: true
+  qty_dot_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dot_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_dot_url:
+    pvalues: 0.9990955461419483
+    same_distribution: true
+  qty_equal_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_equal_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_equal_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_equal_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_equal_url:
+    pvalues: 0.999998043585627
+    same_distribution: true
+  qty_exclamation_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_exclamation_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_exclamation_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_exclamation_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_exclamation_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hashtag_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hashtag_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hashtag_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hashtag_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_hashtag_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hyphen_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hyphen_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hyphen_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hyphen_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_hyphen_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_ip_resolved:
+    pvalues: 0.9999938359229006
+    same_distribution: true
+  qty_mx_servers:
+    pvalues: 0.9799240066474098
+    same_distribution: true
+  qty_nameservers:
+    pvalues: 0.48559214639003767
+    same_distribution: true
+  qty_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_percent_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_percent_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_percent_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_percent_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_percent_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_plus_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_plus_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_plus_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_plus_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_plus_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_questionmark_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_questionmark_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_questionmark_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_questionmark_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_questionmark_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_redirects:
+    pvalues: 0.9888072373433491
+    same_distribution: true
+  qty_slash_directory:
+    pvalues: 0.9886314562074541
+    same_distribution: true
+  qty_slash_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_slash_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_slash_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_slash_url:
+    pvalues: 0.9988767712478831
+    same_distribution: true
+  qty_space_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_space_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_space_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_space_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_space_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_tilde_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_tilde_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_tilde_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_tilde_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_tilde_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_tld_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_underline_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_underline_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_underline_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_underline_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  qty_underline_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_vowels_domain:
+    pvalues: 0.5351901398609056
+    same_distribution: true
+  server_client_domain:
+    pvalues: 1.0
+    same_distribution: true
+  time_domain_activation:
+    pvalues: 0.017411560970813277
+    same_distribution: false
+  time_domain_expiration:
+    pvalues: 0.09810064874471625
+    same_distribution: true
+  time_response:
+    pvalues: 0.1325366545023111
+    same_distribution: true
+  tld_present_params:
+    pvalues: 0.9619569342332105
+    same_distribution: true
+  tls_ssl_certificate:
+    pvalues: 0.9999994497895908
+    same_distribution: true
+  ttl_hostname:
+    pvalues: 0.8108601236676327
+    same_distribution: true
+  url_google_index:
+    pvalues: 1.0
+    same_distribution: true
+  url_shortened:
+    pvalues: 1.0
+    same_distribution: true
+data_drift_with_in_train:
+  asn_ip:
+    pvalues: 0.9947053378225208
+    same_distribution: true
+  directory_length:
+    pvalues: 1.0
+    same_distribution: true
+  domain_google_index:
+    pvalues: 1.0
+    same_distribution: true
+  domain_in_ip:
+    pvalues: 1.0
+    same_distribution: true
+  domain_length:
+    pvalues: 0.9999999987488772
+    same_distribution: true
+  domain_spf:
+    pvalues: 1.0
+    same_distribution: true
+  email_in_url:
+    pvalues: 1.0
+    same_distribution: true
+  file_length:
+    pvalues: 1.0
+    same_distribution: true
+  length_url:
+    pvalues: 0.9999564833626274
+    same_distribution: true
+  params_length:
+    pvalues: 0.999999911246441
+    same_distribution: true
+  phishing:
+    pvalues: 1.0
+    same_distribution: true
+  qty_and_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_and_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_and_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_and_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_and_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_asterisk_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_asterisk_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_asterisk_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_asterisk_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_asterisk_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_at_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_at_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_at_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_at_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_at_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_comma_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_comma_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_comma_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_comma_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_comma_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dollar_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dollar_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dollar_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dollar_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_dollar_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dot_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dot_domain:
+    pvalues: 0.9999988955814566
+    same_distribution: true
+  qty_dot_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_dot_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_dot_url:
+    pvalues: 0.9999999999999992
+    same_distribution: true
+  qty_equal_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_equal_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_equal_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_equal_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_equal_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_exclamation_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_exclamation_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_exclamation_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_exclamation_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_exclamation_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hashtag_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hashtag_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hashtag_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hashtag_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_hashtag_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hyphen_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hyphen_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hyphen_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_hyphen_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_hyphen_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_ip_resolved:
+    pvalues: 1.0
+    same_distribution: true
+  qty_mx_servers:
+    pvalues: 0.999999999245734
+    same_distribution: true
+  qty_nameservers:
+    pvalues: 0.9962164706738773
+    same_distribution: true
+  qty_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_percent_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_percent_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_percent_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_percent_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_percent_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_plus_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_plus_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_plus_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_plus_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_plus_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_questionmark_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_questionmark_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_questionmark_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_questionmark_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_questionmark_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_redirects:
+    pvalues: 0.9999999999450135
+    same_distribution: true
+  qty_slash_directory:
+    pvalues: 0.9999999999410513
+    same_distribution: true
+  qty_slash_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_slash_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_slash_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_slash_url:
+    pvalues: 0.9999999999999979
+    same_distribution: true
+  qty_space_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_space_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_space_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_space_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_space_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_tilde_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_tilde_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_tilde_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_tilde_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_tilde_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_tld_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_underline_directory:
+    pvalues: 1.0
+    same_distribution: true
+  qty_underline_domain:
+    pvalues: 1.0
+    same_distribution: true
+  qty_underline_file:
+    pvalues: 1.0
+    same_distribution: true
+  qty_underline_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  qty_underline_url:
+    pvalues: 1.0
+    same_distribution: true
+  qty_vowels_domain:
+    pvalues: 0.9978098953639675
+    same_distribution: true
+  server_client_domain:
+    pvalues: 1.0
+    same_distribution: true
+  time_domain_activation:
+    pvalues: 0.6242769060690162
+    same_distribution: true
+  time_domain_expiration:
+    pvalues: 0.8651819169506463
+    same_distribution: true
+  time_response:
+    pvalues: 0.901241421351469
+    same_distribution: true
+  tld_present_params:
+    pvalues: 0.9999999863953867
+    same_distribution: true
+  tls_ssl_certificate:
+    pvalues: 1.0
+    same_distribution: true
+  ttl_hostname:
+    pvalues: 0.9999760208086669
+    same_distribution: true
+  url_google_index:
+    pvalues: 1.0
+    same_distribution: true
+  url_shortened:
+    pvalues: 1.0
+    same_distribution: true

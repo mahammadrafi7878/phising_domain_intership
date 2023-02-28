@@ -52,8 +52,9 @@ class DataValidation:
 
                 if same_distribution.pvalue>0.05:
                     drift_report[base_column]={
-                    "pvalues":float(same_distribution.pvalue),
-                    "same_distribution":True}
+                        "pvalues":float(same_distribution.pvalue),
+                        "same_distribution": True
+                    }
 
                 else:
                     drift_report[base_column]={
@@ -75,11 +76,12 @@ class DataValidation:
 
             train_df=pd.read_csv(self.data_ingestion_artifact.train_file_path)
             test_df=pd.read_csv(self.data_ingestion_artifact.test_file_path)
+            
 
-            #exclude_columns=['phishing']
-            #base_df=utils.convert_columns_float(df=base_df,exclude_columns=exclude_columns)
-            #train_df=utils.convert_columns_float(df=train_df,exclude_columns=exclude_columns)
-            #test_df=utils.convert_columns_float(df=test_df,exclude_columns=exclude_columns)
+            exclude_columns=['phishing']
+            base_df=utils.convert_columns_float(df=base_df,exclude_columns=exclude_columns)
+            train_df=utils.convert_columns_float(df=train_df,exclude_columns=exclude_columns)
+            test_df=utils.convert_columns_float(df=test_df,exclude_columns=exclude_columns)
 
 
             train_df_column_status=self.is_required_columns_exist(base_df=base_df,current_df=train_df,report_key_name="missing_columns_within_trainset")

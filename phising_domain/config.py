@@ -12,4 +12,7 @@ class EnvironmentVariable:
     mongo_db_url=os.getenv('MONGO_DB_URL')  
 
 object=EnvironmentVariable()
-mongo_db=pymongo.MongoClient(object.mongo_db_url)
+mongo_db=pymongo.MongoClient(object.mongo_db_url) 
+
+
+TARGET_COLUMN='phishing'
