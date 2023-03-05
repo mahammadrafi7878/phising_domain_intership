@@ -21,14 +21,12 @@ class DataTransformation:
         except Exception as e:
             raise PhisingException(e,sys) 
 
-    @classmethod
-    def get_data_transformer_object(cls):
-        try:
-            robust_scaler=RobustScaler()
-            pipeline=Pipeline(steps=[('scaler',robust_scaler)])
-            return pipeline
-        except Exception as e:
-            raise PhisingException(e,sys)
+    def drop_column(data):
+        if 'Unnamed: 0' in data.columns:
+            data.remove('Unnamed: 0',axis=1,inplace=True)
+        return data
+ 
+    
 
 
 
@@ -44,22 +42,19 @@ class DataTransformation:
             target_feature_train_df=train_df[TARGET_COLUMN]
             target_feature_test_df=test_df[TARGET_COLUMN]
 
-            transformation_pipeline=DataTransformation.get_data_transformer_object()
-            transformation_pipeline.fit(input_feature_train_df) 
-
-            input_feature_train_arr=transformation_pipeline.transform(input_feature_train_df)
-            input_feature_test_arr=transformation_pipeline.transform(input_feature_test_df)
-
+            
             smt=SMOTETomek(sampling_strategy="minority")
             smt=SMOTETomek(random_state=77)
-            input_feature_train_arr,target_feature_train_df=smt.fit_resample(input_feature_train_arr,target_feature_train_df)
+            input_feature_train_arr,target_feature_train_df=smt.fit_resample(input_feature_train_df,target_feature_train_df)
 
-            input_feature_test_arr,target_feature_test_df=smt.fit_resample(input_feature_test_arr,target_feature_test_df) 
+            input_feature_test_arr,target_feature_test_df=smt.fit_resample(input_feature_test_df,target_feature_test_df) 
 
             train_arr=np.c_[input_feature_train_arr,target_feature_train_df]
             test_arr=np.c_[input_feature_test_arr,target_feature_test_df]
+            
 
-
+            transformation_pipeline=self.initiate_data_transformation()
+            
             utils.save_numpy_array_data(file_path=self.data_transformation_config.transformed_train_path,array=train_arr)
             utils.save_numpy_array_data(file_path=self.data_transformation_config.transformed_test_path,array=test_arr)
 

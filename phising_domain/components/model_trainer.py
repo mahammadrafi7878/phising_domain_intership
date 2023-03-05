@@ -38,7 +38,7 @@ class ModelTrainer:
             y_train,y_test=test_arr[:,:-1],test_arr[:-1]
 
 
-            model=self.train_model(x=x_train,y=y_train) 
+            model=self.train_model(x=x_train,y=y_train ) 
 
 
             yhat_train=model.predict(x_train)
