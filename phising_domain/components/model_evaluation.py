@@ -34,23 +34,38 @@ class ModelEvaluation:
                 model_eval_artifact=artifact_entity.ModelEvaluationArtifact(is_model_accepted=True,improved_accuracy=None)
                 return model_eval_artifact
 
-                transformer_path=self.model_resolver.get_latest_transformer_path() 
-                model_path=self.model_resolvar.get_latest_model_path()
+            transformer_path=self.model_resolver.get_latest_transformer_path() 
+            model_path=self.model_resolvar.get_latest_model_path()
 
 
-                transformer=load_object(file_path=transformer_path)
-                model=load_object(file_path=model_path)
+            transformer=load_object(file_path=transformer_path)
+            model=load_object(file_path=model_path)
 
-                current_transformer=load_object(file_path=self.data_transformation_artifact.transform_object_path) 
-                current_model=load_object(file_path=self.model_trainer_artifact.model_path)
+            current_transformer=load_object(file_path=self.data_transformation_artifact.transform_object_path) 
+            current_model=load_object(file_path=self.model_trainer_artifact.model_path)
 
 
-                test_df=pd.read_csv(self.data_ingestion_artifact.test_file_path)
-                target_df=test_df[TARGET_COLUMN]
-                y_true=target_df 
+            test_df=pd.read_csv(self.data_ingestion_artifact.test_file_path)
+            target_df=test_df[TARGET_COLUMN]
+            y_true=target_df 
 
                 
-                 
+            y_pred=model.predict(test_df[TARGET_COLUMN])
+            previous_model_score=f1_score(y_true=y_true,y_pred=y_pred)  
+
+            y_pred2=current_model.predict(test_df[TARGET_COLUMN])
+            current_model__score=f1_score(y_true=y_true,y_pred=y_pred2)
+
+
+            if current_model__score<previous_model_score:
+                raise Exception("current model is not good ")
+
+            model_eval_artifact=artifact_entity.ModelEvaluationArtifact(is_true_model_accepted=True,
+                                           improved_accuracy=current_model__score-previous_model_score)
+
+            return model_eval_artifact
+
+            
         except Exception as e:
             raise PhisingException(e, sys)
         
