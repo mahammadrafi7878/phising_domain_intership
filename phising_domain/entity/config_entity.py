@@ -8,7 +8,7 @@ from datetime import datetime
 FILE_NAME="phising.csv"
 TRAIN_FILE_NAME="train.csv"
 TEST_FILE_NAME="test.csv" 
-MODEL_FILE_name="model.pkl"  
+MODEL_FILE_NAME="model.pkl"  
 
 
 TRANSFER_OBJECT_FILE_NAME="tranformer.pkl"
@@ -75,5 +75,14 @@ class ModelTrainerConfig:
             self.overfitting_threshold=0.1
         except Exception as e:
             raise PhisingException(e, sys)
-class ModelEvaluationConfig:...
+
+
+
+class ModelEvaluationConfig:
+    try:
+        def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+            self.change_threshold=0.01
+    except Exception as e:
+        raise PhisingException(e, sys)
+
 class ModelPusherConfig:...
