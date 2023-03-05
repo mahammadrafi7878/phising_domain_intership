@@ -12,8 +12,8 @@ from sklearn.metrics import f1_score
 
 class ModelEvaluation:
     def __init__(self,model_evaluation_config:config_entity.ModelEvaluationConfig,
-                 data_ingestion_artifact:artifact_entity.DataIngestionartifact,
-                 data_transformtuon_artifact:artifact_entity.DataTransformationartifact,
+                 data_ingestion_artifact:artifact_entity.DataIngestionArtifact,
+                 data_transformtuon_artifact:artifact_entity.DataTransformationArtifact,
                  model_trainer_artifact:artifact_entity.ModelTrainerArtifact
                  ):
                  try:

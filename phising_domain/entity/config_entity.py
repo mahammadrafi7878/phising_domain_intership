@@ -68,14 +68,11 @@ class DataTransformationConfig:
 
 class ModelTrainerConfig:
     def __init__(self,training_pipeline_config:TrainingPipelineConfig):
-        try:
             self.model_trainer_dir=os.path.join(self.training_pipeline_config.artifact_dir,"model_trainer")
             self.model_path=os.path.join(self.model_trainer,"model",MODEL_FILE_NAME)
             self.expected_score=0.8
             self.overfitting_threshold=0.1
-        except Exception as e:
-            raise PhisingException(e, sys)
-
+        
 
 
 class ModelEvaluationConfig:
@@ -85,4 +82,15 @@ class ModelEvaluationConfig:
     except Exception as e:
         raise PhisingException(e, sys)
 
-class ModelPusherConfig:...
+class ModelPusherConfig:
+    try:
+        def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+            self.model_pusher_dir=os.path.join(training_pipeline_config.artifact_dir,'model_pusher')
+            self.saved_model_dir=os.path.join("saved_models")
+            self.pusher_model_dir=os.path.join(self.model_pusher_dir,"saved_models")
+            self.pusher_model_path=os.path.join(self.pusher_model_dir,MODEL_FILE_NAME)
+
+            self.pusher_transformer_path=os.path.join(self.model_pusher_dir,TRANSFER_OBJECT_FILE_NAME)
+
+    except Exception as e:
+        raise PhisingException(e, sys)

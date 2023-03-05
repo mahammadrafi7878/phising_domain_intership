@@ -8,7 +8,7 @@ from typing import Optional
 
 
 class ModelResolver:
-    def __init__(self,model_registery:str="saved_models",transformer_dir_name="transformer",model_dir_name=model):
+    def __init__(self,model_registery:str="saved_models",transformer_dir_name="transformer",model_dir_name='model'):
         try:
             self.model_registery=model_registery
             os.makedirs(self.model_registery,exist_ok=True)
