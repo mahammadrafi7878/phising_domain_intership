@@ -20,13 +20,13 @@ class ModelTrainer:
 
 
 
-    def train_model(self):
+    def train_model(self,x,y):
         try:
             xgb_clas=XGBClassifier()
             xgb_clas.fit(x,y)
             return xgb_clas
         except Exception as e:
-            raise FraudException(e,sys)
+            raise PhishingException(e,sys)
 
 
     def initiate_model_trainer(self):
@@ -34,22 +34,24 @@ class ModelTrainer:
             train_arr=utils.load_numpy_array_data(file_path=self.data_transformation_artifact.transformed_train_path)
             test_arr=utils.load_numpy_array_data(file_path=self.data_transformation_artifact.transformed_test_path)
 
-            x_train,x_test=train_arr[:,:-1],train_arr[:-1]
-            y_train,y_test=test_arr[:,:-1],test_arr[:-1]
+            x_train,y_train=train_arr[:,:-1],train_arr[:,-1]
+            x_test,y_test=test_arr[:,:-1],test_arr[:,-1]
 
 
-            model=self.train_model() 
+            model=self.train_model(x=x_train,y=y_train) 
 
 
             yhat_train=model.predict(x_train)
-            f1_train_score=f1_score(y_true=y_test,y_pred=yhat_train)
+            f1_train_score=f1_score(y_true=y_train,y_pred=yhat_train)
+
+            yhat_test=model.predict(x_test)
             f1_test_score=f1_score(y_true=y_test,y_pred=yhat_test)
 
 
             if f1_test_score<self.model_trainer_config.expected_score:
                 raise Exception("model is not good ") 
 
-            diff=abs(f1_test_score,f1_train_score)
+            diff=abs(f1_test_score-f1_train_score)
             if diff<self.model_trainer_config.overfitting_threshold:
                 raise Exception("model is overfitted")
 
@@ -64,5 +66,5 @@ class ModelTrainer:
 
 
         except Exception as e:
-            raise FraudException(e,sys)
+            raise PhisingException(e,sys)
         
