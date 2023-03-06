@@ -10,7 +10,7 @@ from phising_domain.components.data_validation import DataValidation
 from phising_domain.components.data_transformation import DataTransformation
 from phising_domain.components.model_trainer import ModelTrainer
 from phising_domain.components.model_evaluation import ModelEvaluation 
-from phising_domain.components.model_pusher import ModelPusher
+from phising_domain.components.model_pusher import ModelPusher 
 print(__name__)
 if __name__ == '__main__':
      try:
