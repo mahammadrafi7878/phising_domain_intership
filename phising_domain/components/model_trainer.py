@@ -4,7 +4,7 @@ from phising_domain.exception import PhisingException
 from typing import Optional 
 import os,sys 
 from phising_domain import utils 
-from xgboost import XGBClassifier 
+from sklearn.ensemble import RandomForestClassifier 
 from sklearn.metrics import f1_score  
   
 
@@ -22,9 +22,9 @@ class ModelTrainer:
 
     def train_model(self,x,y):
         try:
-            xgb_clas=XGBClassifier()
-            xgb_clas.fit(x,y)
-            return xgb_clas
+            rf=RandomForestClassifier()
+            rf.fit(x,y)
+            return rf
         except Exception as e:
             raise PhishingException(e,sys)
 
@@ -51,8 +51,8 @@ class ModelTrainer:
             if f1_test_score<self.model_trainer_config.expected_score:
                 raise Exception("model is not good ") 
 
-            diff=abs(f1_test_score-f1_train_score)
-            if diff<self.model_trainer_config.overfitting_threshold:
+            diff=abs(f1_train_score-f1_test_score)
+            if diff>self.model_trainer_config.overfitting_threshold:
                 raise Exception("model is overfitted")
 
 

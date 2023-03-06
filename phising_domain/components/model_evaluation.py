@@ -11,13 +11,13 @@ from sklearn.metrics import f1_score
 
 
 class ModelEvaluation:
-    def __init__(self,model_evaluation_config:config_entity.ModelEvaluationConfig,
+    def __init__(self,model_eval_config:config_entity.ModelEvaluationConfig,
                  data_ingestion_artifact:artifact_entity.DataIngestionArtifact,
-                 data_transformtuon_artifact:artifact_entity.DataTransformationArtifact,
+                 data_transformation_artifact:artifact_entity.DataTransformationArtifact,
                  model_trainer_artifact:artifact_entity.ModelTrainerArtifact
                  ):
                  try:
-                    self.model_evaluation_config=model_evaluation_config
+                    self.model_eval_config=model_eval_config
                     self.data_ingestion_artifact=data_ingestion_artifact
                     self.data_transformation_artifact=data_ingestion_artifact 
                     self.model_trainer_artifact=model_trainer_artifact

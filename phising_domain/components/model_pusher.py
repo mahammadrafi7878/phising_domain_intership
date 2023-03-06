@@ -26,7 +26,7 @@ class ModelPusher:
             model=load_object(file_path=self.data_transformation_artifact.model_path)
 
             save_object(file_path=self.model_pusher_config.pusher_transformation_path, obj=transfomer)
-            save_object(file_path=self.model_pusher_config.pusher_model-path, obj=model)
+            save_object(file_path=self.model_pusher_config.pusher_model_path, obj=model)
 
             transformer_path=self.model_resolver.get_latest_transformer_path()
             model_path=self.model_resolver.get_latest_model_path() 

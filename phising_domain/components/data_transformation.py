@@ -26,7 +26,7 @@ class DataTransformation:
     def get_data_transformation(self,input_feature_train_df,input_feature_test_df,target_feature_train_df,target_feature_test_df):
         try:   
             smt=SMOTETomek(sampling_strategy="minority")
-            smt=SMOTETomek(random_state=77)
+            smt=SMOTETomek(random_state=44)
             input_feature_train_arr,target_feature_train_df=smt.fit_resample(input_feature_train_df,target_feature_train_df)
 
             input_feature_test_arr,target_feature_test_df=smt.fit_resample(input_feature_test_df,target_feature_test_df) 
