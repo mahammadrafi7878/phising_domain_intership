@@ -6,10 +6,8 @@ from typing import Optional
 import pandas as pd 
 import numpy as np 
 from phising_domain import utils 
-from sklearn.preprocessing import RobustScaler
 from imblearn.combine import SMOTETomek
 from phising_domain.config import TARGET_COLUMN 
-from sklearn.pipeline import Pipeline
 
 
 

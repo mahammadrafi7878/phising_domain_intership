@@ -35,14 +35,16 @@ def convert_columns_float(df,exclude_columns):
         raise SensorException(e, sys)   
 
 
-def save_object(file_path:str,obj:str):
+def save_object(file_path: str, obj: object) -> None:
     try:
-        os.makedirs(os.path.dirname(file_path),exist_ok=True)
-        with open(file_path,'wb') as file:
-            dill.dump(obj,file)
-
+        logging.info("Entered the save_object method of utils")
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        with open(file_path, "wb") as file_obj:
+            dill.dump(obj, file_obj)
+        logging.info("Exited the save_object method of utils")
     except Exception as e:
-        raise PhisingException(e,sys)  
+        raise SensorException(e, sys) from e
+
 
 
 def load_object(file_path:str):
