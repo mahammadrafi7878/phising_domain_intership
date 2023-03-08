@@ -17,16 +17,22 @@ def start_batch_prediction(input_file_path):
         model_resolver=ModelResolver(model_registery="saved_models")
 
         df=pd.read_csv(input_file_path)
-        df.replace({'na':np.NAN},inplace=true)
+        df.replace({'na':np.NAN},inplace=True)
 
         transfomer=load_object(file_path=model_resolver.get_latest_transformer_path())
 
-        input_feature_names=list(transformers.input_feature_names_in_)
-        input_arr=transformer.transform(df[input_feature_names])
+        input_feature_names=list(transfomer.feature_names_in_)
+        input_arr=transfomer.transform(df[input_feature_names])
 
         model = load_object(file_path=model_resolver.get_latest_model_path())
         prediction = model.predict(input_arr) 
 
         df["prediction"]=prediction
+
+        prediction_file_name=os.path.basename(input_file_path).replace(".csv",f"{datetime.now().strftime('%m%d%Y__%H%M%S')}.csv")
+
+        prediction_file_path = os.path.join(PREDICTION_DIR,prediction_file_name)
+        df.to_csv(prediction_file_path,index=False,header=True)
+        return prediction_file_path
     except Exception as e:
         raise PhisingException(e,sys)
