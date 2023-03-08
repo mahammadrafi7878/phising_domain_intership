@@ -9,7 +9,9 @@ import dill
 
 def get_collection_as_dataframe(data_base_name:str,collection_name:str):
     try:
+        logging.info(f"reading data form data base {data_base_name} and collection {collection_name}")
         df=pd.DataFrame(list(mongo_db[data_base_name][collection_name].find()))
+        logging.info(f"found columns:{df.columns}")
         return df
         
     except Exception as e:

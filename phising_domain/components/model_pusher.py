@@ -17,6 +17,7 @@ class ModelPusher:
                 ):
 
                 try:
+                    logging.info(f"{'<<' *20}  MODEL PUSHER {'>>' *20}") 
                     
                     self.model_pusher_config=model_pusher_config
                     self.model_trainer_artifact=model_trainer_artifact
@@ -27,22 +28,28 @@ class ModelPusher:
 
     def initiate_model_pusher(self):
         try:
+            logging.info(f"loading transformer and model")
             transfomer=load_object(file_path=self.data_transformation_artifact.transform_object_path)
             model=load_object(file_path=self.model_trainer_artifact.model_path)
 
+            logging.info(f"saving the model into pusher directory")
             save_object(file_path=self.model_pusher_config.pusher_transformer_path, obj=transfomer)
             save_object(file_path=self.model_pusher_config.pusher_model_path, obj=model)
-            
+
+
+            logging.info(f"saving the model in saved model directory")
             transformer_path=self.model_resolver.get_latest_save_transformer_path()
             model_path=self.model_resolver.get_latest_save_model_path()
 
             
             save_object(file_path=transformer_path, obj=transfomer)
             save_object(file_path=model_path, obj=model)
-
+            
+            logging.info(f"preparing model pusher artifact")
             model_pusher_artifact=ModelPusherArtifact(pusher_model_dir=self.model_pusher_config.pusher_model_dir,
              saved_model_dir=self.model_pusher_config.saved_model_dir)
-
+            
+            logging.info(f"model pusher artifact : {model_pusher_artifact}")
             return model_pusher_artifact
         except Exception as e:
             raise PhisingException(e,sys)
