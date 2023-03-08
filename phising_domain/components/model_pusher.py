@@ -33,11 +33,11 @@ class ModelPusher:
             save_object(file_path=self.model_pusher_config.pusher_transformer_path, obj=transfomer)
             save_object(file_path=self.model_pusher_config.pusher_model_path, obj=model)
             
-            transformer_path=self.model_resolver.get_latest_transformer_path()
-            model_path=self.model_resolver.get_latest_transformer_path()
+            transformer_path=self.model_resolver.get_latest_save_transformer_path()
+            model_path=self.model_resolver.get_latest_save_model_path()
 
             
-            save_object(file_path=transformer_path, obj=transformer)
+            save_object(file_path=transformer_path, obj=transfomer)
             save_object(file_path=model_path, obj=model)
 
             model_pusher_artifact=ModelPusherArtifact(pusher_model_dir=self.model_pusher_config.pusher_model_dir,

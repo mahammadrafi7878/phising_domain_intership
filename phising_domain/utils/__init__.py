@@ -32,7 +32,7 @@ def convert_columns_float(df,exclude_columns):
                 df[column]=df[column].astype(float)
         return df
     except Exception as e:
-        raise SensorException(e, sys)   
+        raise PhisingException(error_message, error_detail)(e, sys)   
 
 
 def save_object(file_path: str, obj: object) -> None:
@@ -43,18 +43,19 @@ def save_object(file_path: str, obj: object) -> None:
             dill.dump(obj, file_obj)
         logging.info("Exited the save_object method of utils")
     except Exception as e:
-        raise SensorException(e, sys) from e
+        raise PhisingException(error_message, error_detail)(e, sys) from e
 
 
 
-def load_object(file_path:str):
+def load_object(file_path: str, ) -> object:
     try:
         if not os.path.exists(file_path):
-            raise Exception(f"the file path is not exist")
-        with open(file_path,"rb") as file:
-            return dill.load(file) 
+            raise Exception(f"The file: {file_path} is not exists")
+        with open(file_path, "rb") as file_obj:
+            return dill.load(file_obj)
     except Exception as e:
-        raise PhisingException(e,sys)  
+        raise PhisingException(e, sys) from e
+  
 
 
 def save_numpy_array_data(file_path:str,array:np.array):

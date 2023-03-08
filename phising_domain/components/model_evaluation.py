@@ -49,11 +49,15 @@ class ModelEvaluation:
             target_df=test_df[TARGET_COLUMN]
             y_true=target_df 
 
-                
-            y_pred=model.predict(test_df[TARGET_COLUMN])
+            input_feature_name=list(transformer.input_feature_names_in_)
+            input_arr=transformer.transform(test_df[input_feature_name])   
+            y_pred=model.predict(input_arr)
             previous_model_score=f1_score(y_true=y_true,y_pred=y_pred)  
 
-            y_pred2=current_model.predict(test_df[TARGET_COLUMN])
+
+            input_feature_name=list(current_transformer.input_feature_names_in_)
+            input_arr=current_transformer.transform(test_df[input_feature_name])
+            y_pred2=current_model.predict(input_arr)
             current_model__score=f1_score(y_true=y_true,y_pred=y_pred2)
 
 
