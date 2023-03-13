@@ -43,3 +43,14 @@
 22. It is possible to predict a batch of file or a single value , In batch prediction we can pass a mpore number of values in single prediction we pass a single value . In most cases we use batch prediction.
 
 23. It is possible to store models in a folder like saved models and predictions in predictions folder.
+
+24.At Transformation stage " our data donot have missing values , then we can directlt use "data_transformation22.py " component for transfornmation stage . At this stage we can not use pipe line using function we directly apply transfomation.
+
+DEPLOYEMENT:
+   For deployement we  use AWS cloud , airflow scheduler , S3 bucket using github as configuration.
+
+   In airflow folder create a training pipeline and batch prediction pipeliune.
+
+   At first create airflow dags and workflow folders. write necessary code for workflow for AWS , Then we create a login user inb AWS using IAM, after creating user , creating a AWS repository using ECR, to store model, transformations and input ,outputfiles use a s# bucket , so, need to create a S3 bucket, after creating these create a intermediate macvhine using EC@ container , in the EC@ container we can select which machine need to execute model like ubuntu, windows, mac ...etc.
+   First test code locally , after these we configure github repo to EC@ machine and run the model .
+   
