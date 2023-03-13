@@ -8,12 +8,12 @@ from airflow.operators.python import PythonOperator
 
 
 with DAG(
-    'phising_prediction',
+    'phising_training',
     default_args={'retries': 2},
     # [END default_args]
-    description='phiusing domain prediction detection',
+    description='phishing domain Detection',
     schedule_interval="@weekly",
-    start_date=pendulum.datetime(2023, 2, 10, tz="UTC"),
+    start_date=pendulum.datetime(2023, 3, 13, tz="UTC"),
     catchup=False,
     tags=['example'],
 ) as dag:
