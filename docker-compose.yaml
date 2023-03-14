@@ -1,6 +1,6 @@
 version: "2"
 services:
-  application:
+ application:
     image: ${IMAGE_NAME}
     container_name: phishing
     ports:
