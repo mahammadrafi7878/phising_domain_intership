@@ -54,3 +54,4 @@ DEPLOYEMENT:
    At first create airflow dags and workflow folders. write necessary code for workflow for AWS , Then we create a login user inb AWS using IAM, after creating user , creating a AWS repository using ECR, to store model, transformations and input ,outputfiles use a s# bucket , so, need to create a S3 bucket, after creating these create a intermediate macvhine using EC@ container , in the EC@ container we can select which machine need to execute model like ubuntu, windows, mac ...etc.
    First test code locally , after these we configure github repo to EC@ machine and run the model .
    
+   
