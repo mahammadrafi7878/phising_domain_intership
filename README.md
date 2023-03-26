@@ -55,3 +55,8 @@ DEPLOYEMENT:
    First test code locally , after these we configure github repo to EC@ machine and run the model .
    
    
+   
+   
+   
+   
+   
