@@ -1,6 +1,0 @@
-[2023-03-09 00:10:37,110] 15 root _ INFO _ creating prediction directory
-[2023-03-09 00:10:37,111] 18 root _ INFO _ Creating model resolver object
-[2023-03-09 00:10:37,111] 21 root _ INFO _ reading input file :/config/workspace/phising_dataset.csv
-[2023-03-09 00:10:37,619] 23 root _ INFO _ replacing na values with np.nan
-[2023-03-09 00:10:37,619] 26 root _ INFO _ Loading transformer to transform dataset
-[2023-03-09 00:10:37,724] 33 root _ INFO _ loading the model to make predictions 
